@@ -1,7 +1,7 @@
 import { EMPLOYEES_LOADED, EMPLOYEE_ADDED } from './constants';
 
 export const initialState = {
-  employees: [],
+  employees: []
 };
 
 // Read this: https://redux.js.org/basics/reducers
@@ -21,6 +21,6 @@ const appReducer = (state = initialState, action) => {
     default:
         return state
   }
-}
+};
 
 export default appReducer;
