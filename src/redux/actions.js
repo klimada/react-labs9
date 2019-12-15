@@ -1,5 +1,4 @@
-import { EMPLOYEES_LOADED } from './constants';
-import { EMPLOYEE_ADDED } from './constants';
+import { EMPLOYEES_LOADED, EMPLOYEE_ADDED } from "./constants";
 
 export const employeesLoaded = (employees) => {
   return {
@@ -8,7 +7,7 @@ export const employeesLoaded = (employees) => {
       employees
     }
   };
-}
+};
 
 export const newEmployeeAdded = (newEmployee) => {
   return {
@@ -17,4 +16,4 @@ export const newEmployeeAdded = (newEmployee) => {
       newEmployee
     }
   };
-}
+};

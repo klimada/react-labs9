@@ -2,7 +2,7 @@ import React from 'react'
 import { withRouter } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { compose } from 'redux'
-import { newEmployeeAdded } from '../redux/actions'
+import { newEmployeeAdded,employeesLoaded } from '../redux/actions'
 
 class PageEmployeeCreate extends React.Component {
   constructor(props) {
@@ -99,15 +99,6 @@ class PageEmployeeCreate extends React.Component {
   }
 }
 
-const mapStateToProps = (state /*, ownProps*/) => {
-  return {
-    id: state.id,
-    name: state.name,
-    age: state.age,
-    company: state.company,
-    email: state.email
-  }
-}
 
 const mapDispatchToProps = (dispatch) => ({
   newEmployeeAdded: newEmployee => dispatch(newEmployeeAdded(newEmployee))
@@ -115,5 +106,5 @@ const mapDispatchToProps = (dispatch) => ({
 
 export default compose(
   withRouter,
-  connect(mapStateToProps, mapDispatchToProps)
+  connect(null, mapDispatchToProps)
 )(PageEmployeeCreate)
